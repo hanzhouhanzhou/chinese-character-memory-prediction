@@ -12,7 +12,9 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ## 🗺️ Overall Pipeline
 
-🧩 End-to-end analytical workflow:
+**Figure 1. End-to-end analytical workflow**
+
+*Overview of data processing, feature analysis, and modeling strategy.*
 
 ![Pipeline Overview](images/Pipeline/Pipeline.png)
 
@@ -33,21 +35,29 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 📊 Distribution of ACC
 
-![ACC Histogram](images/Pipeline/Histogram ACC.png)
+**Figure 2. Distribution of memory retention score (ACC)**
 
-- Strong left-skewness
-- Clear ceiling effect near 1.0
-- Indicates non-normality and motivates transformation / robust modeling
+*Histogram showing the skewed distribution and ceiling effect of ACC.*
+
+![ACC Histogram](./images/Histogram%20ACC.png)
+
+- Strong left-skewness  
+- Clear ceiling effect near 1.0  
+- Indicates non-normality and motivates transformation / robust modeling  
 
 ---
 
 ### 📦 Boxplot of ACC
 
-![ACC Boxplot](images/Pipeline/Boxplot ACC.png)
+**Figure 3. Boxplot of ACC values**
 
-- Most values concentrated at high ACC
-- Long tail of lower-retention characters
-- Presence of outliers confirmed
+*Visual summary of central tendency, spread, and outliers.*
+
+![ACC Boxplot](./images/Boxplot%20ACC.png)
+
+- Most values concentrated at high ACC  
+- Long tail of lower-retention characters  
+- Presence of outliers confirmed  
 
 ---
 
@@ -55,18 +65,25 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🚨 Missing Values Summary
 
-![Missing Values Summary](images/Pipeline/Missing Values Summary.png)
+**Figure 4. Summary of missing values across variables**
 
+*Counts of missing observations per feature.*
+
+![Missing Values Summary](./images/Missing%20Values%20Summary.png)
 
 ---
 
 ### 📋 Missing Values Across Features
 
-![Missing Values](images/Pipeline/Missing Values png)
+**Figure 5. Missing value distribution by feature**
 
-- Missingness is feature-dependent
-- Some psycholinguistic variables contain substantial gaps
-- Decisions on exclusion or handling were made accordingly
+*Feature-level inspection of data completeness.*
+
+![Missing Values](./images/Missing%20Values.png)
+
+- Missingness is feature-dependent  
+- Some psycholinguistic variables contain substantial gaps  
+- Decisions on exclusion or handling were made accordingly  
 
 ---
 
@@ -74,23 +91,31 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🔗 Correlation Matrix (Numeric Features + ACC)
 
-![Correlation Matrix](images/Pipeline/Correlation Matrix.png)
+**Figure 6. Pearson correlation matrix**
+
+*Pairwise correlations among numeric features and ACC.*
+
+![Correlation Matrix](./images/Correlation%20Matrix.png)
 
 Key observations:
 
-- Familiarity and frequency-related features show moderate correlation with ACC
-- Structural features exhibit internal correlations
-- No extreme multicollinearity directly with ACC
+- Familiarity and frequency-related features show moderate correlation with ACC  
+- Structural features exhibit internal correlations  
+- No extreme multicollinearity directly with ACC  
 
 ---
 
 ### 🌳 Hierarchically Clustered Correlation Heatmap
 
-![Hierarchical Correlation](images/Pipeline/Hierarchically.png)
+**Figure 7. Hierarchical clustering of feature correlations**
 
-- Reveals feature clusters beyond pairwise correlations
-- Highlights redundancy groups among structural variables
-- Supports later feature grouping and modeling decisions
+*Correlation structure revealed through hierarchical clustering.*
+
+![Hierarchical Correlation](./images/Hierarchically.png)
+
+- Reveals feature clusters beyond pairwise correlations  
+- Highlights redundancy groups among structural variables  
+- Supports later feature grouping and modeling decisions  
 
 ---
 
@@ -111,8 +136,18 @@ Key observations:
 - Strong internal feature structure justifies careful feature handling
 - Data understanding precedes and constrains model performance
 
+---
 
+## 🛠 Tools
 
+Python · pandas · matplotlib · scikit-learn · PyTorch
+
+---
+
+## 📌 Notes
+
+Full implementation details are available in the accompanying notebook.
+This repository emphasizes **analytical reasoning supported by modeling results**.
 
 
 ## 🛠 Tools
