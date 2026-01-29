@@ -14,7 +14,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 🧩 End-to-end analytical workflow:
 
-![Pipeline](images/Pipeline.png)
+![Pipeline Overview](images/Pipeline/Pipeline.png)
 
 ---
 
@@ -33,7 +33,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 📊 Distribution of ACC
 
-![ACC Histogram](images/Histogram%20ACC.png)
+![ACC Histogram](images/Pipeline/Histogram ACC.png)
 
 - Strong left-skewness
 - Clear ceiling effect near 1.0
@@ -43,7 +43,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 📦 Boxplot of ACC
 
-![ACC Boxplot](images/Boxplot%20ACC.png)
+![ACC Boxplot](images/Pipeline/Boxplot ACC.png)
 
 - Most values concentrated at high ACC
 - Long tail of lower-retention characters
@@ -55,13 +55,14 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🚨 Missing Values Summary
 
-![Missing Values Summary](images/Missing%20Values%20Summary.png)
+![Missing Values Summary](images/Pipeline/Missing Values Summary.png)
+
 
 ---
 
 ### 📋 Missing Values Across Features
 
-![Missing Values Across Features](images/Missing%20Values.png)
+![Missing Values](images/Pipeline/Missing Values png)
 
 - Missingness is feature-dependent
 - Some psycholinguistic variables contain substantial gaps
@@ -73,7 +74,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🔗 Correlation Matrix (Numeric Features + ACC)
 
-![Correlation Matrix](images/Correlation%20Matrix.png)
+![Correlation Matrix](images/Pipeline/Correlation Matrix.png)
 
 Key observations:
 
@@ -85,7 +86,7 @@ Key observations:
 
 ### 🌳 Hierarchically Clustered Correlation Heatmap
 
-![Clustered Correlation Heatmap](images/Hierarchically.png)
+![Hierarchical Correlation](images/Pipeline/Hierarchically.png)
 
 - Reveals feature clusters beyond pairwise correlations
 - Highlights redundancy groups among structural variables
