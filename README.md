@@ -1,71 +1,118 @@
 # 🧠 Chinese Character Memory Prediction
 
-**Goal:**  
-Understand and model how visual and structural properties of Chinese characters
-relate to human memory retention.
+## 🎯 Project Goal
+
+This project investigates how **visual and structural properties of Chinese characters**
+relate to **human visual–verbal memory retention (ACC)**.
+
+The primary focus is on **exploratory data analysis and feature understanding**.
+Machine learning models are used as supporting tools rather than the main narrative.
 
 ---
 
-## 📊 Data Overview
+## 🗺️ Overall Pipeline
 
-- Samples: Chinese characters
-- Target: Memory retention score
-- Inputs:
-  - Handcrafted structural features
-  - Character images
+🧩 End-to-end analytical workflow:
 
-![Modeling Framework](images/Pipeline.png)
-
-
+![Pipeline](images/Pipeline/Pipeline.png)
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
+## 📦 Data Overview
 
-This section provides a concise exploratory analysis to understand the
-distributional properties of the target variable and the relationships
-between structural features and memory retention.
-
----
-
-### 🎯 Target Variable: Memory Retention (ACC)
-
-<img src="images/acc_distribution.png" width="700">
-
-The target variable (ACC) exhibits a pronounced **left-skewed distribution**
-(skew ≈ −2.07), with a strong ceiling effect near 1.0.  
-This indicates non-normality and motivates the use of transformations
-and models robust to skewed targets.
-
-<img src="images/acc_boxplot.png" width="700">
-
-The boxplot further confirms heavy concentration at high ACC values
-and the presence of low-end outliers.
+- **Samples**: Chinese characters  
+- **Target variable**: Memory retention score (**ACC**, range 0–1)
+- **Feature groups**:
+  - 🧱 Structural features (stroke count, radicals, composition)
+  - 🧠 Psycholinguistic features (AoA, familiarity)
+  - 🖼️ Visual image-based features (used later)
 
 ---
 
-### 📊 Feature Space Overview
+## 🎯 Target Variable Analysis (ACC)
 
-<img src="images/feature_distributions.png" width="900">
+### 📊 Distribution of ACC
 
-Selected feature distributions highlight substantial heterogeneity:
-continuous semantic features, discrete structural counts,
-and binary orthographic indicators coexist within the feature space.
-All features are scaled to the \([0,1]\) range for comparability.
+![ACC Histogram](images/Pipeline/Histogram%20of%20the%20Target%20Variable%20(ACC).PNG)
+
+- Strong left-skewness
+- Clear ceiling effect near 1.0
+- Indicates non-normality and motivates transformation / robust modeling
 
 ---
 
-### 🔗 Correlation Structure
+### 📦 Boxplot of ACC
 
-<img src="images/correlation_clustermap.png" width="900">
+![ACC Boxplot](images/Pipeline/Boxplot%20of%20the%20target%20variable%20.png)
 
-Correlation analysis reveals that **lexical–semantic features**
-(e.g., familiarity, contextual frequency) show stronger associations
-with memory retention, while **structural features**
-(e.g., stroke and radical counts) form coherent clusters with weaker
-direct correlations to ACC.
+- Most values concentrated at high ACC
+- Long tail of lower-retention characters
+- Presence of outliers confirmed
 
-These observations inform subsequent modeling choices and feature integration strategies.
+---
+
+## 🧹 Data Quality Check
+
+### 🚨 Missing Values Summary
+
+![Missing Values Summary](images/Pipeline/Missing%20Values%20Summary.png)
+
+---
+
+### 📋 Missing Values Across Features
+
+![Missing Values Across Features](images/Pipeline/Summary%20of%20Missing%20Values%20Across%20Features)
+
+- Missingness is feature-dependent
+- Some psycholinguistic variables contain substantial gaps
+- Decisions on exclusion or handling were made accordingly
+
+---
+
+## 🔍 Exploratory Feature Analysis
+
+### 🔗 Correlation Matrix (Numeric Features + ACC)
+
+![Correlation Matrix](images/Pipeline/Correlation%20Matrix%20of%20Predictive%20Numeric%20Features.png)
+
+Key observations:
+
+- Familiarity and frequency-related features show moderate correlation with ACC
+- Structural features exhibit internal correlations
+- No extreme multicollinearity directly with ACC
+
+---
+
+### 🌳 Hierarchically Clustered Correlation Heatmap
+
+![Clustered Correlation Heatmap](images/Pipeline/Hierarchically%20Clustered%20Correlation%20Heatmap.png)
+
+- Reveals feature clusters beyond pairwise correlations
+- Highlights redundancy groups among structural variables
+- Supports later feature grouping and modeling decisions
+
+---
+
+## 🤖 Modeling (Brief Overview)
+
+- Regression-based models (linear, regularized, tree-based)
+- CNN-based image features used as complementary signals
+- Ensemble strategies explored at a conceptual level
+
+📌 Modeling serves as validation rather than the main contribution.
+
+---
+
+## 🧠 Key Takeaways
+
+- Memory retention (ACC) is highly skewed and non-Gaussian
+- Structural and psycholinguistic features provide partial explanatory power
+- Strong internal feature structure justifies careful feature handling
+- Data understanding precedes and constrains model performance
+
+---
+
+
 
 
 ## 🛠 Tools
