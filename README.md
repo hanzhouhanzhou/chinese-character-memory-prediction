@@ -14,74 +14,59 @@ relate to human memory retention.
   - Handcrafted structural features
   - Character images
 
-![Data Distribution](images/data_distribution.png)
+![Modeling Framework](images/Pipeline.png)
+
+
 
 ---
 
-## 🔍 Exploratory Analysis — Feature Space
+## 🔍 Exploratory Data Analysis (EDA)
 
-### Feature Distributions
-![Feature Distribution](images/feature_distribution.png)
-
----
-
-### Feature Correlations
-![Feature Correlation](images/feature_correlation.png)
+This section provides a concise exploratory analysis to understand the
+distributional properties of the target variable and the relationships
+between structural features and memory retention.
 
 ---
 
-### Feature vs Memory Retention
-![Feature vs Target](images/feature_vs_target.png)
+### 🎯 Target Variable: Memory Retention (ACC)
+
+<img src="images/acc_distribution.png" width="700">
+
+The target variable (ACC) exhibits a pronounced **left-skewed distribution**
+(skew ≈ −2.07), with a strong ceiling effect near 1.0.  
+This indicates non-normality and motivates the use of transformations
+and models robust to skewed targets.
+
+<img src="images/acc_boxplot.png" width="700">
+
+The boxplot further confirms heavy concentration at high ACC values
+and the presence of low-end outliers.
 
 ---
 
-## 🔍 Exploratory Analysis — Pattern Discovery
+### 📊 Feature Space Overview
 
-### Key Observations (from EDA)
-- No single dominant feature explains memorability
-- Multiple structural factors interact
-- Non-linear patterns are evident
+<img src="images/feature_distributions.png" width="900">
 
-![EDA Summary](images/eda_summary.png)
-
----
-
-## 🧩 Modeling Overview (Context Only)
-
-Models are used to **quantify and validate analytical findings**, not as the project focus.
-
-- Feature-based regression (analytical baseline)
-- Image-based CNN regression
-- Prediction-level model combination
+Selected feature distributions highlight substantial heterogeneity:
+continuous semantic features, discrete structural counts,
+and binary orthographic indicators coexist within the feature space.
+All features are scaled to the \([0,1]\) range for comparability.
 
 ---
 
-## 📈 Model Comparison
+### 🔗 Correlation Structure
 
-![Model Comparison](images/model_comparison.png)
+<img src="images/correlation_clustermap.png" width="900">
 
----
+Correlation analysis reveals that **lexical–semantic features**
+(e.g., familiarity, contextual frequency) show stronger associations
+with memory retention, while **structural features**
+(e.g., stroke and radical counts) form coherent clusters with weaker
+direct correlations to ACC.
 
-## 🖼 CNN Training Evidence
+These observations inform subsequent modeling choices and feature integration strategies.
 
-![CNN Training Curve](images/training_curve.png)
-
----
-
-## 🔗 Model Combination Insight
-
-![Fusion Illustration](images/fusion_diagram.png)
-
----
-
-## 🧠 Key Takeaways
-
-- Character memorability is multi-factorial
-- Handcrafted features explain substantial variance
-- Image-based representations capture complementary structure
-- Combining both improves robustness
-
----
 
 ## 🛠 Tools
 
