@@ -14,7 +14,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 🧩 End-to-end analytical workflow:
 
-![Pipeline](images/Pipeline/Pipeline.png)
+![Pipeline](images/Pipeline.png)
 
 ---
 
@@ -33,7 +33,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 📊 Distribution of ACC
 
-![ACC Histogram](images/Pipeline/Histogram%20of%20the%20Target%20Variable%20(ACC).PNG)
+![ACC Histogram](images/Histogram%20ACC.png)
 
 - Strong left-skewness
 - Clear ceiling effect near 1.0
@@ -43,7 +43,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 📦 Boxplot of ACC
 
-![ACC Boxplot](images/Pipeline/Boxplot%20of%20the%20target%20variable%20.png)
+![ACC Boxplot](images/Boxplot%20ACC.png)
 
 - Most values concentrated at high ACC
 - Long tail of lower-retention characters
@@ -55,13 +55,13 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🚨 Missing Values Summary
 
-![Missing Values Summary](images/Pipeline/Missing%20Values%20Summary.png)
+![Missing Values Summary](images/Missing%20Values%20Summary.png)
 
 ---
 
 ### 📋 Missing Values Across Features
 
-![Missing Values Across Features](images/Pipeline/Summary%20of%20Missing%20Values%20Across%20Features)
+![Missing Values Across Features](images/Missing%20Values.png)
 
 - Missingness is feature-dependent
 - Some psycholinguistic variables contain substantial gaps
@@ -73,7 +73,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🔗 Correlation Matrix (Numeric Features + ACC)
 
-![Correlation Matrix](images/Pipeline/Correlation%20Matrix%20of%20Predictive%20Numeric%20Features.png)
+![Correlation Matrix](images/Correlation%20Matrix.png)
 
 Key observations:
 
@@ -85,7 +85,7 @@ Key observations:
 
 ### 🌳 Hierarchically Clustered Correlation Heatmap
 
-![Clustered Correlation Heatmap](images/Pipeline/Hierarchically%20Clustered%20Correlation%20Heatmap.png)
+![Clustered Correlation Heatmap](images/Hierarchically.png)
 
 - Reveals feature clusters beyond pairwise correlations
 - Highlights redundancy groups among structural variables
@@ -110,7 +110,6 @@ Key observations:
 - Strong internal feature structure justifies careful feature handling
 - Data understanding precedes and constrains model performance
 
----
 
 
 
