@@ -39,7 +39,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 *Histogram showing the skewed distribution and ceiling effect of ACC.*
 
-![ACC Histogram](images/Histogram.png)
+![ACC Histogram](Histogram.png)
 
 
 - Strong left-skewness  
@@ -54,7 +54,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 *Visual summary of central tendency, spread, and outliers.*
 
-![ACC Boxplot](./images/Boxplot%20ACC.png)
+![ACC Boxplot](Boxplot%20ACC.png)
 
 - Most values concentrated at high ACC  
 - Long tail of lower-retention characters  
@@ -64,23 +64,15 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ## 🧹 Data Quality Check
 
-### 🚨 Missing Values Summary
 
-**Figure 4. Summary of missing values across variables**
-
-*Counts of missing observations per feature.*
-
-![Missing Values Summary](./images/Missing%20Values%20Summary.png)
-
----
 
 ### 📋 Missing Values Across Features
 
-**Figure 5. Missing value distribution by feature**
+**Figure 4. Missing value distribution by feature**
 
 *Feature-level inspection of data completeness.*
 
-![Missing Values](./images/Missing%20Values.png)
+![Missing Values](Missing%20Values.png)
 
 - Missingness is feature-dependent  
 - Some psycholinguistic variables contain substantial gaps  
@@ -92,11 +84,11 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 ### 🔗 Correlation Matrix (Numeric Features + ACC)
 
-**Figure 6. Pearson correlation matrix**
+**Figure 5. Pearson correlation matrix**
 
 *Pairwise correlations among numeric features and ACC.*
 
-![Correlation Matrix](./images/Correlation%20Matrix.png)
+![Correlation Matrix](Correlation%20Matrix.png)
 
 Key observations:
 
@@ -108,11 +100,11 @@ Key observations:
 
 ### 🌳 Hierarchically Clustered Correlation Heatmap
 
-**Figure 7. Hierarchical clustering of feature correlations**
+**Figure 6. Hierarchical clustering of feature correlations**
 
 *Correlation structure revealed through hierarchical clustering.*
 
-![Hierarchical Correlation](./images/Hierarchically.png)
+![Hierarchical Correlation](Hierarchically.png)
 
 - Reveals feature clusters beyond pairwise correlations  
 - Highlights redundancy groups among structural variables  
