@@ -39,7 +39,7 @@ Machine learning models are used as supporting tools rather than the main narrat
 
 *Histogram showing the skewed distribution and ceiling effect of ACC.*
 
-![ACC Histogram](./images/Histogram%20ACC.png)
+![ACC Histogram](images/Histogram.png)
 
 - Strong left-skewness  
 - Clear ceiling effect near 1.0  
