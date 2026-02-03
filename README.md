@@ -100,7 +100,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ## 🧩 Character Complexity Stratification
 
-![Complexity](images/complexity_examples.png)
+![Complexity](complexity_examples.png)
 
 Characters are grouped into:
 - 🟢 **Simple**
