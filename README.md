@@ -88,7 +88,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ### 🧠 Correlation Structure
 
-![Correlation](images/feature_correlation.png)
+![Correlation](feature_correlation.png)
 
 **Key Insight**
 > **Experience-related features** (frequency, familiarity, AoA)  
