@@ -47,7 +47,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ## 🔄 Analytical Workflow
 
-![Pipeline](pipeline.png)
+![Pipeline](/pipeline.png)
 
 **End-to-end structure**  
 ➡️ Data inspection  
