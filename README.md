@@ -62,7 +62,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ### 🔹 ACC Distribution (Raw)
 
-![ACC Distribution](Histogram.png)
+![ACC Distribution](ACC Distribution.png)
 
 **🔍 Observation**
 - Strong **right-skew**
@@ -76,7 +76,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ### 🔹 ACC After Box–Cox Transformation
 
-![BoxCox](images/acc_boxcox.png)
+![BoxCox](acc_boxcox.png)
 
 **Insight**
 - Transformation improves numerical stability  
