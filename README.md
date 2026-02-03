@@ -137,7 +137,7 @@ Characters are grouped into:
 
 ### 📉 Residual Distribution
 
-![Residual Dist](images/residual_distribution.png)
+![Residual Dist](residual_distribution.png)
 
 **Insight**
 - Residuals are centered  
@@ -149,7 +149,7 @@ Characters are grouped into:
 
 ### ⭐ SHAP Feature Importance
 
-![SHAP](images/shap_summary.png)
+![SHAP](shap_summary.png)
 
 **Top Drivers of Memorability**
 1. **Frequency in context**
