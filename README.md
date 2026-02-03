@@ -112,7 +112,7 @@ Characters are grouped into:
 
 ## 🤖 Model Performance (High-Level)
 
-![Performance](images/model_performance.png)
+![Performance](model_performance.png)
 
 ### 📊 What We Learn
 ✔️ Feature-based models outperform image-only models  
