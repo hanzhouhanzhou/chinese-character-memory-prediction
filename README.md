@@ -188,6 +188,6 @@ prioritizing **clarity, insight, and interpretability** over academic completene
 
 ---
 
-⭐ *If you work in data, this is what “thinking with data” looks like.*
+
 
 
