@@ -127,7 +127,7 @@ Characters are grouped into:
 
 ### 🔍 True vs. Predicted ACC
 
-![Residual Scatter](images/residual_scatter.png)
+![Residual Scatter](residual_scatter.png)
 
 **Observation**
 - Errors increase for **low-retention** characters  
