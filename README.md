@@ -1,156 +1,193 @@
-# 🧠 Chinese Character Memory Prediction
-
-## 🎯 Project Goal
-
-This project investigates how **visual and structural properties of Chinese characters**
-relate to **human visual–verbal memory retention (ACC)**.
-
-The primary focus is on **exploratory data analysis and feature understanding**.
-Machine learning models are used as supporting tools rather than the main narrative.
+# 🧠 What Makes Chinese Characters Memorable?
+### 📊 A Data Science Case Study on Human Memory Retention
 
 ---
 
-## 🗺️ Overall Pipeline
+## ✨ Project Snapshot
 
-**Figure 1. End-to-end analytical workflow**
+> **This project investigates what makes Chinese characters easier or harder to remember,  
+using data-driven analysis, interpretability techniques, and error diagnostics.**
 
-*Overview of data processing, feature analysis, and modeling strategy.*
-
-![Pipeline Overview](images/Pipeline/Pipeline.png)
-
----
-
-## 📦 Data Overview
-
-- **Samples**: Chinese characters  
-- **Target variable**: Memory retention score (**ACC**, range 0–1)
-- **Feature groups**:
-  - 🧱 Structural features (stroke count, radicals, composition)
-  - 🧠 Psycholinguistic features (AoA, familiarity)
-  - 🖼️ Visual image-based features (used later)
+🔍 **Focus**: Data understanding & insight  
+🚫 **Not** a model competition  
+🎯 **Audience**: Data Analyst / Data Scientist / Analytics roles
 
 ---
 
-## 🎯 Target Variable Analysis (ACC)
+## 🚀 Why This Project Matters
 
-### 📊 Distribution of ACC
-
-**Figure 2. Distribution of memory retention score (ACC)**
-
-*Histogram showing the skewed distribution and ceiling effect of ACC.*
-
-![ACC Histogram](Histogram.png)
-
-
-- Strong left-skewness  
-- Clear ceiling effect near 1.0  
-- Indicates non-normality and motivates transformation / robust modeling  
+✔️ Real-world, **human-behavior data**  
+✔️ Strong **distributional challenges**  
+✔️ Emphasis on **interpretability over raw performance**  
+✔️ Clear demonstration of **analytical reasoning**
 
 ---
 
-### 📦 Boxplot of ACC
+## ❓ Core Questions
 
-**Figure 3. Boxplot of ACC values**
-
-*Visual summary of central tendency, spread, and outliers.*
-
-![ACC Boxplot](Boxplot%20ACC.png)
-
-- Most values concentrated at high ACC  
-- Long tail of lower-retention characters  
-- Presence of outliers confirmed  
+- 🧩 **How is memory retention distributed across characters?**
+- 📈 **Which feature types truly matter?**
+- 🧠 **Does visual complexity explain memorability?**
+- ⚠️ **Where do predictive models systematically fail?**
 
 ---
 
-## 🧹 Data Quality Check
+## 🗂️ Data Overview
 
+📦 **Samples**: ~1,600 Chinese characters  
+🎯 **Target**: Memory retention score (**ACC**, bounded 0–1)
 
-
-### 📋 Missing Values Across Features
-
-**Figure 4. Missing value distribution by feature**
-
-*Feature-level inspection of data completeness.*
-
-![Missing Values](Missing%20Values.png)
-
-- Missingness is feature-dependent  
-- Some psycholinguistic variables contain substantial gaps  
-- Decisions on exclusion or handling were made accordingly  
+### 🔎 Feature Categories
+- 📊 **Frequency & familiarity**
+- 🧠 **Psycholinguistic features**
+- 🧩 **Structural complexity**
+- 🖼️ **Image-based visual representations**
 
 ---
 
-## 🔍 Exploratory Feature Analysis
+## 🔄 Analytical Workflow
 
-### 🔗 Correlation Matrix (Numeric Features + ACC)
+![Pipeline](images/pipeline.png)
 
-**Figure 5. Pearson correlation matrix**
-
-*Pairwise correlations among numeric features and ACC.*
-
-![Correlation Matrix](Correlation%20Matrix.png)
-
-Key observations:
-
-- Familiarity and frequency-related features show moderate correlation with ACC  
-- Structural features exhibit internal correlations  
-- No extreme multicollinearity directly with ACC  
+**End-to-end structure**  
+➡️ Data inspection  
+➡️ Exploratory analysis  
+➡️ Feature relationships  
+➡️ Model validation  
+➡️ Error analysis  
 
 ---
 
-### 🌳 Hierarchically Clustered Correlation Heatmap
+## 📈 Target Variable Analysis
 
-**Figure 6. Hierarchical clustering of feature correlations**
+### 🔹 ACC Distribution (Raw)
 
-*Correlation structure revealed through hierarchical clustering.*
+![ACC Distribution](images/acc_distribution.png)
 
-![Hierarchical Correlation](Hierarchically.png)
+**🔍 Observation**
+- Strong **right-skew**
+- Clear **ceiling effect**
 
-- Reveals feature clusters beyond pairwise correlations  
-- Highlights redundancy groups among structural variables  
-- Supports later feature grouping and modeling decisions  
+**📌 Why it matters**
+> Classical modeling assumptions do not hold.  
+> Understanding the data is more important than chasing metrics.
 
 ---
 
-## 🤖 Modeling (Brief Overview)
+### 🔹 ACC After Box–Cox Transformation
 
-- Regression-based models (linear, regularized, tree-based)
-- CNN-based image features used as complementary signals
-- Ensemble strategies explored at a conceptual level
+![BoxCox](images/acc_boxcox.png)
 
-📌 Modeling serves as validation rather than the main contribution.
+**Insight**
+- Transformation improves numerical stability  
+- **Data imbalance remains intrinsic**
+
+---
+
+## 🔗 Feature Relationships
+
+### 🧠 Correlation Structure
+
+![Correlation](images/feature_correlation.png)
+
+**Key Insight**
+> **Experience-related features** (frequency, familiarity, AoA)  
+> dominate over **raw visual complexity**.
+
+📌 Structural features show **internal redundancy**.
+
+---
+
+## 🧩 Character Complexity Stratification
+
+![Complexity](images/complexity_examples.png)
+
+Characters are grouped into:
+- 🟢 **Simple**
+- 🔴 **Complex**
+
+➡️ Enables **error stratification** and diagnostic analysis.
+
+---
+
+## 🤖 Model Performance (High-Level)
+
+![Performance](images/model_performance.png)
+
+### 📊 What We Learn
+✔️ Feature-based models outperform image-only models  
+✔️ CNN-only performance is **very limited**  
+✔️ Fusion adds **marginal gains at best**
+
+> **Models are validation tools — not the main narrative.**
+
+---
+
+## ⚠️ Error Analysis
+
+### 🔍 True vs. Predicted ACC
+
+![Residual Scatter](images/residual_scatter.png)
+
+**Observation**
+- Errors increase for **low-retention** characters  
+- Clear **heteroscedasticity** with complexity
+
+---
+
+### 📉 Residual Distribution
+
+![Residual Dist](images/residual_distribution.png)
+
+**Insight**
+- Residuals are centered  
+- Slight skew reflects **imbalanced learning difficulty**
+
+---
+
+## 🧠 Model Interpretation (Best Model)
+
+### ⭐ SHAP Feature Importance
+
+![SHAP](images/shap_summary.png)
+
+**Top Drivers of Memorability**
+1. **Frequency in context**
+2. **Familiarity**
+3. **Age of acquisition**
+4. **Stroke count (secondary)**
+
+> **Interpretability reveals more than accuracy metrics.**
 
 ---
 
 ## 🧠 Key Takeaways
 
-- Memory retention (ACC) is highly skewed and non-Gaussian
-- Structural and psycholinguistic features provide partial explanatory power
-- Strong internal feature structure justifies careful feature handling
-- Data understanding precedes and constrains model performance
+✅ Memory retention data is **highly skewed and bounded**  
+✅ **Data understanding > model complexity**  
+✅ Interpretability explains *why*, not just *how well*  
+✅ Error analysis is essential for responsible modeling  
 
 ---
 
-## 🛠 Tools
+## 🛠️ Tools & Stack
 
-Python · pandas · matplotlib · scikit-learn · PyTorch
-
----
-
-## 📌 Notes
-
-Full implementation details are available in the accompanying notebook.
-This repository emphasizes **analytical reasoning supported by modeling results**.
-
-
-## 🛠 Tools
-
-Python · pandas · matplotlib · scikit-learn · PyTorch
+🧪 Python  
+📊 pandas · numpy  
+📈 matplotlib · seaborn  
+🤖 scikit-learn · PyTorch  
+🔍 SHAP  
 
 ---
 
 ## 📌 Notes
 
-Full implementation details are available in the accompanying notebook.
-This repository emphasizes **analytical reasoning supported by modeling results**.
+This project is adapted from a **Master’s thesis**.  
+The GitHub version is intentionally **market-facing**,  
+prioritizing **clarity, insight, and interpretability** over academic completeness.
+
+---
+
+⭐ *If you work in data, this is what “thinking with data” looks like.*
+
 
