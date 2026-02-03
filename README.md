@@ -62,7 +62,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ### 🔹 ACC Distribution (Raw)
 
-![ACC Distribution](acc_distribution.png)
+![ACC Distribution](Histogram.png)
 
 **🔍 Observation**
 - Strong **right-skew**
