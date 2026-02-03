@@ -47,7 +47,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ## 🔄 Analytical Workflow
 
-![Pipeline](images/pipeline.png)
+![Pipeline](pipeline.png)
 
 **End-to-end structure**  
 ➡️ Data inspection  
@@ -62,7 +62,7 @@ using data-driven analysis, interpretability techniques, and error diagnostics.*
 
 ### 🔹 ACC Distribution (Raw)
 
-![ACC Distribution](images/acc_distribution.png)
+![ACC Distribution](acc_distribution.png)
 
 **🔍 Observation**
 - Strong **right-skew**
